@@ -1,0 +1,28 @@
+backend:
+  image: docker.io/pradipmengal/opbackend:v1
+  replicaCount: 1
+  port: 3000
+
+frontend:
+  image: docker.io/pradipmengal/opfrontend:v4
+  replicaCount: 1
+  port: 8080
+
+mysql:
+  image: mysql:8.0
+  replicaCount: 1
+  rootPassword: pass123
+  database: appdb
+  storage: 1Gi
+
+config:
+  DB_HOST: mysql
+  DB_PORT: "3306"
+  DB_NAME: appdb
+
+secret:
+  DB_USER: root
+  DB_PASSWORD: pass123
+
+service:
+  port: 80

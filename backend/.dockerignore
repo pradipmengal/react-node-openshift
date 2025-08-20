@@ -1,0 +1,22 @@
+# Dependency directories
+node_modules
+npm-debug.log
+
+# OS / Editor files
+.DS_Store
+*.swp
+*.swo
+
+# Logs and environment files
+*.log
+.env
+.env.*
+
+# Version control
+.git
+.gitignore
+
+# Build artifacts (if any)
+dist
+build
+coverage
